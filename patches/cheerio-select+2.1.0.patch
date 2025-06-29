@@ -1,0 +1,18 @@
+diff --git a/node_modules/cheerio-select/lib/esm/index.js b/node_modules/cheerio-select/lib/esm/index.js
+index ea6c7f0..9d62c4e 100644
+--- a/node_modules/cheerio-select/lib/esm/index.js
++++ b/node_modules/cheerio-select/lib/esm/index.js
+@@ -1,11 +1,11 @@
+ import { parse, SelectorType, isTraversal } from "css-what";
+-import { _compileToken as compileToken, prepareContext, } from "css-select";
++import { _compileToken as compileToken, prepareContext, } from "css-select/lib/index.js";
+ import * as DomUtils from "domutils";
+ import * as boolbase from "boolbase";
+ import { getDocumentRoot, groupSelectors } from "./helpers.js";
+ import { isFilter, getLimit, } from "./positionals.js";
+ // Re-export pseudo extension points
+-export { filters, pseudos, aliases } from "css-select";
++export { filters, pseudos, aliases } from "css-select/lib/index.js";
+ const UNIVERSAL_SELECTOR = {
+     type: SelectorType.Universal,
+     namespace: null,

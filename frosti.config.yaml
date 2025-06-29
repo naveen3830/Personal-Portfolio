@@ -1,0 +1,85 @@
+# Basic site information
+site:
+  tab: Naveen's Blog
+  title: 💠 Naveen's Blog
+  description: aspiring Data Scientist sharing my learnings and insights
+  language: en
+  favicon: /favicon.ico
+  theme:
+    light: winter
+    dark: dracula
+    code: github-dark
+  date_format: ddd MMM DD YYYY
+  blog:
+    pageSize: 8
+  menu:
+    - id: home
+      text: Home
+      href: /
+      svg: "material-symbols:home-outline-rounded"
+      target: _self
+    - id: blog
+      text: Blogs
+      href: /blog
+      svg: "material-symbols:book-2-outline-rounded"
+      target: _self
+      subItems:
+        - id: all
+          text: All blogs
+          href: /blog
+          svg: "material-symbols:ink-pen-outline-rounded"
+          target: _self
+        - id: documentation
+          text: Documentation
+          href: /blog/category/Documentation
+          svg: "material-symbols:unknown-document-outline-rounded"
+          target: _self
+        - id: examples
+          text: Examples
+          href: /blog/category/Examples
+          svg: "material-symbols:deployed-code-outline"
+          target: _self
+    - id: project
+      text: Project
+      href: /project
+      svg: "material-symbols:code-blocks-outline"
+      target: _self
+    - id: contact
+      text: Contact
+      href: "mailto:naveenr3830@gmail.com"
+      target: _blank
+      svg: "material-symbols:attach-email-outline-rounded"
+
+# user's personal information
+user:
+  name: Naveen R
+  site: "https://naveen3830.github.io/Portfolio/"
+  avatar: /profile.png
+  sidebar:
+    social:
+      - href: "https://github.com/naveen3830"
+        ariaLabel: Github
+        title: Github
+        svg: "ri:github-line"
+      - href: "https://x.com/Naveen3830"
+        ariaLabel: X(twitter)
+        title: X(twitter)
+        svg: "ri:twitter-line"
+      - href: "https://www.linkedin.com/in/naveen3830/"
+        ariaLabel: LinkedIn
+        title: LinkedIn
+        svg: "ri:linkedin-line"
+  footer:
+    social:
+      - href: "https://github.com/naveen3830"
+        ariaLabel: Github
+        title: Github
+        svg: "ri:github-line"
+      - href: "https://x.com/Naveen3830"
+        ariaLabel: X(twitter)
+        title: X(twitter)
+        svg: "ri:twitter-line"
+      - href: "https://www.linkedin.com/in/naveen3830/"
+        ariaLabel: LinkedIn
+        title: LinkedIn
+        svg: "ri:linkedin-line"
