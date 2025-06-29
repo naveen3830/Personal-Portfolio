@@ -1,24 +1,38 @@
+# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # or your default branch
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  # Required for `actions/deploy-pages`
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
         with:
           version: 8
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-      - run: pnpm install
-      - run: pnpm run build
-      - uses: withastro/action@v2
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site with Astro
+        uses: withastro/action@v3   # <-- Official Astro build action
         with:
-          deploy-dir: dist
+          command: build           # defaults to `npm run build` or `pnpm run build`
